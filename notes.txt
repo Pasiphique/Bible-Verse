@@ -1,0 +1,1 @@
+generate bible api for the verses

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible Study</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        .content {
+            margin-bottom: 20px;
+        }
+        .verse, .summary, .context, .questions {
+            margin: 15px 0;
+        }
+        .question-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .question-list li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Bible Study Application</h1>
+
+    <div class="content">
+        <div class="verse">
+            <h2>Verse:</h2>
+            <p>{{ verse }}</p>
+        </div>
+
+        <div class="summary">
+            <h2>Summary:</h2>
+            <p>{{ summary }}</p>
+        </div>
+
+        <div class="context">
+            <h2>Context:</h2>
+            <p>{{ context }}</p>
+        </div>
+
+        <div class="questions">
+            <h2>Discussion Questions:</h2>
+            <ul class="question-list">
+                {% for question in questions %}
+                    <li>{{ question }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
